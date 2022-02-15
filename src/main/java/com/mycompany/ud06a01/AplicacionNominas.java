@@ -68,10 +68,29 @@ public class AplicacionNominas {
                         }
                         break;
                 case 3: System.out.println("Introduce el DNI del empleado: ");
-                        dni=teclado.nextLine();
-                        System.out.println(sn.getEmpleado(dni));
+                        dni = teclado.nextLine();
+                        e = sn.getEmpleado(dni);
+                        if (e != null) {
+                        System.out.println(e);
+                        }
                         break;
-                case 4: 
+                case 4: System.out.println("Introduce el DNI del empleado: ");
+                        dni = teclado.nextLine();
+                        e = sn.getEmpleado(dni);
+                        if (e != null) {
+                        System.out.println("Empleado a eliminar" + e);
+                        System.out.println("Si/No");
+                        String seguro = teclado.nextLine();
+                        if (seguro.equals("SI")) {
+                        if (sn.eliminarEmpleado(e)) {
+                        System.out.println("Empleado eliminado");
+                        } else {
+                        System.out.println("Empleado no se a podido eliminar");
+                        }
+                        }
+                        } else {
+                        System.out.println("Empleado no existe");
+                        }
                         break;
                 case 5: for(Empleado e1: sn.listarEmpleados()){
                             System.out.println(e1);
