@@ -8,23 +8,25 @@ package com.mycompany.ud06a01;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  *
  * @author daw1
  */
 public class SistemaNominas{
-    private List<Empleado> empleados;
+    private Set<Empleado> empleados;
 
     public SistemaNominas() {
-        empleados=new ArrayList<>();
+        empleados=new TreeSet<>();
     }
 
-    public List<Empleado> getEmpleados() {
+    public Set<Empleado> getEmpleados() {
         return empleados;
     }
 
-    public void setEmpleados(List<Empleado> empleados) {
+    public void setEmpleados(TreeSet<Empleado> empleados) {
         this.empleados = empleados;
     }
     
