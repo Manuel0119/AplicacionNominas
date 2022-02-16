@@ -36,6 +36,7 @@ public class AplicacionNominas {
             System.out.println("0. Salir");
             System.out.println("Introduzca opcion");
             opcion=teclado.nextInt();
+            teclado.nextLine();
 
             switch(opcion){
                 case 1: System.out.println("Introduzca el DNI: ");
@@ -44,6 +45,7 @@ public class AplicacionNominas {
                         nombre=teclado.nextLine();
                         System.out.println("Introduzca el salario: ");
                         salario=teclado.nextFloat();
+                        teclado.nextLine();
                         if(sn.incluirEmpleado(new EmpleadoFijo(dni,nombre,salario))){
                             System.out.println("Empleado incluido en el sistema");
                         }
@@ -74,22 +76,23 @@ public class AplicacionNominas {
                         System.out.println(e);
                         }
                         break;
-                case 4: System.out.println("Introduce el DNI del empleado: ");
+                case 4: 
+                        System.out.println("Introduce el DNI del empleado: ");
                         dni = teclado.nextLine();
                         e = sn.getEmpleado(dni);
                         if (e != null) {
-                        System.out.println("Empleado a eliminar" + e);
-                        System.out.println("Si/No");
-                        String seguro = teclado.nextLine();
-                        if (seguro.equals("SI")) {
-                        if (sn.eliminarEmpleado(e)) {
-                        System.out.println("Empleado eliminado");
+                            System.out.println("Empleado a eliminar" + e);
+                            System.out.println("Si/No");
+                            String seguro = teclado.nextLine();
+                            if (seguro.equals("SI")) {
+                                if (sn.eliminarEmpleado(e)) {
+                                    System.out.println("Empleado eliminado");
+                                } else {
+                                    System.out.println("Empleado no se a podido eliminar");
+                                }
+                            }
                         } else {
-                        System.out.println("Empleado no se a podido eliminar");
-                        }
-                        }
-                        } else {
-                        System.out.println("Empleado no existe");
+                            System.out.println("Empleado no existe");
                         }
                         break;
                 case 5: for(Empleado e1: sn.listarEmpleados()){
