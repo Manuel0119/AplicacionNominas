@@ -20,10 +20,10 @@ public class EmpleadoFijo extends Empleado{
     }
     
     /**
-     *
-     * @param dni
-     * @param nombre
-     * @param salario
+     * Constructor que reutiliza atributos del constructor de la clase padre Empleado, incluyendo el salario del empleado fijo.
+     * @param dni dni del empleado fijo.
+     * @param nombre nombre del empleado fijo.
+     * @param salario salario del empleado fijo.
      */
     public EmpleadoFijo(String dni, String nombre, float salario) {
         super(dni, nombre);
@@ -36,8 +36,8 @@ public class EmpleadoFijo extends Empleado{
     }
 
     /**
-     *
-     * @return
+     * Método que devuelve los ingresos de un empleado fijo. 
+     * @return ingresos de un empleado fijo.
      */
     @Override
     public float ingresos() {
@@ -45,16 +45,16 @@ public class EmpleadoFijo extends Empleado{
     }
 
     /**
-     *
-     * @return
+     * Método que devuelve el salario de un empleado fijo.
+     * @return salario de un empleado fijo.
      */
     public float getSalario() {
         return salario;
     }
 
     /**
-     *
-     * @param salario
+     * Método que establece el salario de un empleado fijo.
+     * @param salario salario de un empleado fijo.
      */
     public void setSalario(float salario) {
         this.salario = salario;

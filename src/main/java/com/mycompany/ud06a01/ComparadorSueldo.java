@@ -13,6 +13,12 @@ import java.util.Comparator;
  */
 public class ComparadorSueldo implements Comparator<Empleado>{
 
+    /**
+     * Método que nos permite comparar los sueldos de dos empleados.
+     * @param e1 empleado 1.
+     * @param e2 empleado 2.
+     * @return 0 si ambos empleados tienen el mismo sueldo, -1 si el sueldo del primer empleados es menor que la del segundo y 1 si el sueldo del primer empleado es mayor que la del segundo empleado. 
+     */
     @Override
     public int compare(Empleado e1, Empleado e2) {
         int salida=0;

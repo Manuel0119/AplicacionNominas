@@ -16,25 +16,34 @@ public abstract class Empleado implements Comparable<Empleado>{
     private String nombre;
 
     /**
-     *
+     * Constructor vacío de la clase Empleado.
      */
     public Empleado(){}
 
     /**
-     *
-     * @param dni
-     * @param nombre
+     * Constructor que inicializa los atributos del dni y el nombre del empleado a su valor por defecto.
+     * @param dni dni del empleado.
+     * @param nombre nombre del empleado.
      */
     public Empleado(String dni, String nombre) {
         this.dni = dni;
         this.nombre = nombre;
     }
     
+    /**
+     * Método que devuelve una cadena con el dni y el nombre del empleado.
+     * @return cadena con el dni y el nombre del empleado.
+     */
     @Override
     public String toString() {
         return dni +","+ nombre;
     }
     
+    /**
+     * Método que nos permite comparar dos empleados por su dni.
+     * @param empleado empleados del sistema de nóminas.
+     * @return un entero negativo, cero o un entero positivo, ya que este objeto es menor, igual o mayor que el objeto especificado.
+     */
     @Override
     public int compareTo(Empleado empleado) {
         return this.dni.compareTo(empleado.dni);
@@ -65,40 +74,40 @@ public abstract class Empleado implements Comparable<Empleado>{
     }
 
     /**
-     *
-     * @return
+     * Método que devuelve el dni de un empleado.
+     * @return dni del empleado solicitado.
      */
     public String getDni() {
         return dni;
     }
 
     /**
-     *
-     * @param dni
+     * Método que establece el dni de un empleado.
+     * @param dni dni del empleado.
      */
     public void setDni(String dni) {
         this.dni = dni;
     }
 
     /**
-     *
-     * @return
+     * Método que devuelve el nombre de un empleado.
+     * @return nombre del empleado solicitado.
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     *
-     * @param nombre
+     * Método que establece el nombre de un empleado 
+     * @param nombre nombre del empleado.
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
     
     /**
-     *
-     * @return
+     * Método abstracto que devuelve los ingresos de un empleado.
+     * @return ingresos de un empleado.
      */
     public abstract float ingresos();
         
